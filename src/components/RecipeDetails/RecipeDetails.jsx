@@ -7,13 +7,16 @@ import './RecipeDetails.css'
 import * as icons from '../diet-icons/DietIcons'
 import Hand from '../diet-icons/icons/Hand'
 import Heart from '../diet-icons/icons/Heart'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 export default function RecipeDetails(props) {
 
+    
+    let  {id} = useParams();
+    console.log(id, 'props')
 
-    const id = props.match.params.id
+   // const id = props?.match.params.id
     
     let recipeDetails = useSelector(state => state.recipeDetails)
     let history = useNavigate()

@@ -9,7 +9,7 @@ import Lupa from '../diet-icons/icons/Lupa'
 export default function NavBar( { validate, onSearch }) { 
     const history = useNavigate();
 
-    const navigateTo = () => history.push('/home');
+    const navigateTo = () => history('/home');
 
     const [name, setName] = useState('')
     

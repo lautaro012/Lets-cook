@@ -132,7 +132,7 @@ export const createRecipe = function(payload, history) {
                         payload: recipe
                     })
                 )
-                history.push("/Recipe/" + recipe.id)
+                history("/Recipe/" + recipe.id)
             })
             
         } catch (error) {
