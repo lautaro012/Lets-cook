@@ -1,0 +1,135 @@
+
+.IMG-CARD{
+    width: 45%;
+    max-width: 312px;
+    max-height: 213px;
+    padding: 0.2rem;
+}
+
+.CONTEINER-AL-LADO-DE-LA-IMAGEN {
+    display:flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 0.2rem;
+}
+
+.SCORE_Y_DIETS {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 2px 2px 8px #dd5d26bd;
+}
+
+.Link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    margin: 2rem 1rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.limit {
+    height: 60%;
+    overflow-y : hidden;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow: 2px 2px 8px #dd5d26bd;
+    overflow-wrap: anywhere;
+}
+
+.NOMBRE-Y-DETALLES {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.DIETS-ICONS {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.HS-ICONS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow: 2px 2px 8px #dd5d26bd;
+}
+
+.HS-TEXT {
+    font-size: 2rem;
+}
+
+.card {
+    display: flex;
+    height: 213px;
+    width: 650px;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #ffffff7f;
+    border: solid 2px #dd5d26bd;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+    right: 0;
+}
+
+.card:hover {
+    transform: scale(1.2, 1.2);
+  }
+  
+.card:hover::after {
+      opacity: 1;
+ }
+
+ .card-favourite {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 14px 0px 1rem;
+    background-color: #ffffff7F;
+  }
+  
+  .favourite-checkbox {
+    display: none;
+  }
+  
+  .favourite-label {
+    font-size: 25px;
+    transition: 500ms;
+    cursor: pointer;
+  }
+  
+  .favourite-checkbox:checked + .favourite-label {
+    color: red;
+    transform: scale(1.2);
+  }
+  

@@ -1,0 +1,15 @@
+.Paginado-conteiner {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 2rem;
+}
+
+
+.Paginado {
+    list-style: none;
+    display: flex;
+}
+
+

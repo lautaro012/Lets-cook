@@ -1,0 +1,256 @@
+
+.conteiner-general {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: contain;
+  background-repeat: none
+  ;
+}
+
+.favs {
+    display: flex;
+    flex-direction: row;
+    max-width: 60%;
+    animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1500px, 0, 0); /* The image width */
+  }
+}
+.CONTEINER-NAV {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+
+.FILTERS_AND_RECIPES {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+
+}
+.FILTERS {
+  display: flex;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-direction: column;
+  width: 20%;
+}
+
+.FIXED-FILTER {
+  position: fixed;
+  border: solid 2px #dd5d26bd;
+  background: #ffffff7f;
+  backdrop-filter: blur(2px);
+  border-radius: 2px;
+  top: 5rem;
+  left: 8%;
+  right: 70%;
+  padding: 0.5rem;
+}
+
+
+.RECIPES-CONTEINER {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+
+.CHEAP-BTN {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #dd5d26bd;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+
+.NOMBRE-Y-DETALLES {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.FILTER-NAME {
+  border-bottom: 1px solid #000000bd;
+}
+
+
+  .loader {
+    width: 48px;
+    height: 40px;
+    margin-top: 30px;
+    display: inline-block;
+    position: relative;
+    background: #FFF;
+    border-radius: 15% 15% 35% 35%;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 45px;
+    top: 8px;
+    border: 4px solid #FFF;
+    width: 16px;
+    height: 20px;
+    border-radius: 0 4px 4px 0;
+  }
+  .loader::before {
+    content: '';  
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    color: #FFF;
+    top: -15px;
+    left: 11px;
+    box-sizing: border-box;
+    animation: animloader 1s ease infinite;
+  }
+  
+  @keyframes animloader {
+      0% {
+    box-shadow: 2px 0px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0.3), 20px 0px rgba(255, 255, 255, 0);
+  }
+      50% {
+    box-shadow: 2px -5px rgba(255, 255, 255, 0.5), 12px -3px rgba(255, 255, 255, 0.5), 20px -2px rgba(255, 255, 255, 0.6);
+  }
+      100% {
+    box-shadow: 2px -8px rgba(255, 255, 255, 0), 12px -5px rgba(255, 255, 255, 0), 20px -5px rgba(255, 255, 255, 0);
+  }
+    }
+
+
+    .LOADING {
+      position: fixed;
+      background-color: black;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .NOT-FOUND-ICON {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .POPULARS {
+      position: absolute;
+      right: 40%;
+      font-style: italic;
+      font-weight: bolder;
+      text-shadow: 2px 2px 8px #dd5d26bd;
+    }
+
+    .DETAILS-RECIPES{
+      text-transform: uppercase;
+     font-style: italic;
+     font-weight: bolder;
+     text-shadow: 2px 2px 8px #dd5d26bd;
+     display: flex;
+     flex-wrap: wrap;
+    }
+
+.SUMMARY-RECIPES {
+  list-style: none;
+
+}
+
+
+.SUMMARY-RECIPES::before{
+
+  padding-right: 1rem;
+}
+
+.DETAILS-RECIPES[open] + .SUMMARY-RECIPES::before{
+ content: '-';
+}
+
+.ORDER-RECIPES {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bolder;
+  text-shadow: 2px 2px 8px #dd5d26bd;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+.SELECT-ORDER {
+  background: #ffffff7F;
+  backdrop-filter: blur(1px);
+  border: none;
+  border-bottom: 2px solid #000000bd;
+}
+
+.MY-RECIPE {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.MY-RECIPE:hover,
+.MY-RECIPE:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.MY-RECIPE:hover {
+  transform: translateY(-1px);
+}
+
+.MY-RECIPE:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+
+
+.CARROUSEL {
+  display: flex;
+  overflow: hidden;
+  width: 65%;
+}
+
